@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namepace
+metadata:
+  name: roboshop-dev
+  labels:
+    environment: development
+    project: roboshop
