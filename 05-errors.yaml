@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: errors
+  labels:
+    project: roboshop 
+spec:
+  containers:
+  - name: nginx
+    image: nginxxx #ImagePullBackOff when given wrong image name/address
