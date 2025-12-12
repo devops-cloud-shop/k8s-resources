@@ -6,5 +6,7 @@ metadata:
     project: roboshop 
 spec:
   containers:
-  - name: nginx
-    image: nginxxx #ImagePullBackOff when given wrong image name/address
+  # - name: nginx
+  #   image: nginxxx #ImagePullBackOff when given wrong image name/address
+  - name: almalinux
+    image: almalinux:9
