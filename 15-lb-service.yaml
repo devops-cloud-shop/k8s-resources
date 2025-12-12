@@ -9,7 +9,7 @@ spec:
     environment: prod
     purpose: loadbalancer
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
-    NodePort: 30005
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      NodePort: 30005
