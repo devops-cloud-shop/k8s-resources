@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-np-demo
+  labels:
+    component: user
+    environment: testing/QA
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    
