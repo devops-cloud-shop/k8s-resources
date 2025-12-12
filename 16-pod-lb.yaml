@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod-lb-demo
+  labels:
+    component: shipping
+    environment: prod
+    purpose: loadbalancer
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    
