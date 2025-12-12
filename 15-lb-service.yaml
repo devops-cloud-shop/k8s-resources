@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: service-lb
 spec:
-  type: loadbalancer
+  type: LoadBalancer
   selector:
     component: shipping
     environment: prod
