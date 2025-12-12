@@ -4,9 +4,8 @@ metadata:
   name: pod-np-demo
   labels:
     component: user
-    environment: testing/QA
+    environment: QA
 spec:
   containers:
   - name: nginx
     image: nginx
-    

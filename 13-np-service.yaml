@@ -6,7 +6,7 @@ spec:
   type: NodePort
   selector:
     component: user
-    environment: testing/QA
+    environment: QA
   ports:
    - protocol: TCP
      port: 80 #service port
