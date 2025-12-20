@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels: #these are deployment labels
+    purpose: dp-demo
+    project: roboshop
+spec:
+  replicas: 3
+  selector:
+    matchLabels: #these labels are used to select pods
+      purpose: dp-demo
+      project: roboshop
+  template: #pod definition
+    metadata:
+      labels:
+        purpose: dp-demo
+        project: roboshop
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
