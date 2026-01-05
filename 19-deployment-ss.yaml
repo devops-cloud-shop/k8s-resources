@@ -41,7 +41,7 @@ kind: Service
 metadata:
   name: nginx
 spec: # if a service clusterIP is NONE, then it is called as headless service
-  clusterIp: None
+  clusterIP: None
   selector:
     purpose: headless-service-demo
     project: roboshop
