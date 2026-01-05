@@ -39,7 +39,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: nginx
+  name: nginx-headless
 spec: # if a service clusterIP is NONE, then it is called as headless service
   clusterIP: None
   selector:
