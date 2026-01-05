@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  labels: #these are deployment labels
+    purpose: headless-service-demo
+    project: roboshop
+spec:
+  replicas: 3
+  selector:
+    matchLabels: #these labels are used to select pods
+      purpose: headless-service-demo
+      project: roboshop
+  template: #pod definition
+    metadata:
+      labels:
+        purpose: headless-service-demo
+        project: roboshop
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx
+spec:
+  selector:
+    purpose: headless-service-demo
+    project: roboshop
+  ports:
+   - protocol: TCP
+     port: 80 #service port
+     targetPort: 80 #containerport
